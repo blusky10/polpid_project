@@ -1,4 +1,4 @@
-package polpid.oauth.config;
+package polpid.spring.oauth.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

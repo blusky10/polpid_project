@@ -1,4 +1,4 @@
-package polpid.oauth;
+package polpid.spring.oauth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

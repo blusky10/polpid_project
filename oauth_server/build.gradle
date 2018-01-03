@@ -1,10 +1,12 @@
 buildscript {
     ext {
-        springBootVersion = '1.5.8.RELEASE'
+        springBootVersion = '1.5.9.RELEASE'
     }
     repositories {
-		jcenter()
-		mavenCentral()
+//		jcenter()
+//		mavenCentral()
+        maven { url 'http://70.121.224.52:8081/nexus/content/repositories/central/' }
+        jcenter{ url 'http://70.121.224.52:8081/nexus/content/repositories/jcenter/' }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -21,8 +23,13 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
-	jcenter()
-	mavenCentral()
+//	jcenter()
+//	mavenCentral()
+    maven { url 'http://70.121.224.52:8081/nexus/content/repositories/central/' }
+    maven { url 'http://70.121.224.52:8081/nexus/content/groups/public-snapshot-repositories/' }
+    maven { url 'http://70.121.224.52:8081/nexus/content/groups/public/' }
+    maven { url 'http://70.121.224.52:8081/nexus/content/repositories/anyframe-3rd-party/' }
+    jcenter{ url 'http://70.121.224.52:8081/nexus/content/repositories/jcenter/' }
 }
 
 dependencies {
