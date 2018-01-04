@@ -3,7 +3,8 @@ buildscript {
 		springBootVersion = '1.5.9.RELEASE'
 	}
 	repositories {
-		mavenCentral()
+		jcenter()
+ 		mavenCentral()
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -19,14 +20,18 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
+	jcenter()
 	mavenCentral()
 }
 
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
-	compile('org.springframework.boot:spring-boot-starter-security')
+//	compile('org.springframework.boot:spring-boot-starter-security')
 	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.data:spring-data-envers')
+
+	compile('org.mariadb.jdbc:mariadb-java-client:2.0.2')
 	compileOnly('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('org.springframework.security:spring-security-test')

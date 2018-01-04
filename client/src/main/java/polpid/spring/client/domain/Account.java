@@ -2,6 +2,7 @@ package polpid.spring.client.domain;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import org.hibernate.envers.AuditOverride;
 import org.hibernate.envers.Audited;
 import org.springframework.data.jpa.domain.AbstractAuditable;
@@ -13,6 +14,7 @@ import java.util.List;
 
 @Entity
 @Data
+@NoArgsConstructor
 @EqualsAndHashCode(callSuper=false)
 @Audited
 @AuditOverride(forClass = AbstractAuditable.class)

@@ -15,7 +15,6 @@ import polpid.spring.client.domain.Account;
 import polpid.spring.client.enums.EnableStatus;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import static org.junit.Assert.assertTrue;
@@ -53,7 +52,7 @@ public class AccountRepositoryTest {
 
         System.out.println(accounts);
         assertTrue(1 == accounts.size());
-        
+
         verify(accountRepository).findAll();
     }
 
