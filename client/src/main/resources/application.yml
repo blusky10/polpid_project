@@ -1,3 +1,10 @@
+server:
+  port: 8082
+  context-path: /ui
+  session:
+    cookie:
+      name: UISESSION
+
 spring:
   application:
     name: polpid_spring_study
@@ -21,6 +28,8 @@ spring:
         enable_lazy_load_no_trans: true
         dialect: org.hibernate.dialect.MySQLDialect
         default_schema: springstudy
+  thymeleaf:
+    cache: false
 
 logging:
   level:
@@ -28,3 +37,14 @@ logging:
     org.springframework.security: debug
     org.springframework.web: debug
 
+security:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      clientId: clientId
+      clientSecret: secret
+      accessTokenUri: http://localhost:8081/auth/oauth/token
+      userAuthorizationUri: http://localhost:8081/auth/oauth/authorize
+    resource:
+      userInfoUri: http://localhost:8081/auth/rest/hello/principal

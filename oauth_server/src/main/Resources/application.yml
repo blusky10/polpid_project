@@ -1,33 +1,39 @@
 server:
-  port: 8111
-spring:
-  application:
-    name: polpid_spring_study
-  datasource:
-    driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/oauth_server
-    username: root
-    validation-query: select 1
-    test-while-idle: true
-    time-between-eviction-runs-millis: 300000
-    test-on-borrow: false
-    initialize: false
-  jpa:
-    database: mysql
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        format_sql: true
-        enable_lazy_load_no_trans: true
-        dialect: org.hibernate.dialect.MySQLDialect
-        default_schema: oauth_server
+  port: 8081
+  context-path: /auth
+
+#spring:
+#  application:
+#    name: polpid_spring_study
+#  datasource:
+#    driver-class-name: org.mariadb.jdbc.Driver
+#    url: jdbc:mariadb://localhost:3306/oauth_server
+#    username: root
+#    validation-query: select 1
+#    test-while-idle: true
+#    time-between-eviction-runs-millis: 300000
+#    test-on-borrow: false
+#    initialize: false
+#  jpa:
+#    database: mysql
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        format_sql: true
+#        enable_lazy_load_no_trans: true
+#        dialect: org.hibernate.dialect.MySQLDialect
+#        default_schema: oauth_server
 
 logging:
   level:
     ROOT: info
     org.springframework.security: debug
     org.springframework.web: debug
+
+security:
+  basic:
+    enabled: true
 
 
